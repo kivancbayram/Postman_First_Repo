@@ -1,0 +1,1691 @@
+{
+	"info": {
+		"_postman_id": "5de12846-f315-40a8-b826-c354869b5b54",
+		"name": "Udemy Valentina Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Section1-Homework-NyTimes",
+			"item": [
+				{
+					"name": "1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.nytimes.com/svc/books/v3/lists.json?api-key=uw3yrJkBbvUqRRLDl1Xf9PvpJ49A59aU&list=hardcover-nonfiction&rank=2&published_date=2021-05-30",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nytimes",
+								"com"
+							],
+							"path": [
+								"svc",
+								"books",
+								"v3",
+								"lists.json"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "uw3yrJkBbvUqRRLDl1Xf9PvpJ49A59aU"
+								},
+								{
+									"key": "list",
+									"value": "hardcover-nonfiction"
+								},
+								{
+									"key": "rank",
+									"value": "2"
+								},
+								{
+									"key": "published_date",
+									"value": "2021-05-30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section1",
+			"item": [
+				{
+					"name": "First Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uuid\": \"9864686489485\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://httpbin.org/uuid",
+							"protocol": "https",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"uuid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cURL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "trello.com"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+							},
+							{
+								"key": "x-trello-reqid",
+								"value": "600c3473d37f5b0e4de7033a-0.5952436062597937"
+							},
+							{
+								"key": "x-trello-client-version",
+								"value": "build-7773"
+							},
+							{
+								"key": "x-trello-traceid",
+								"value": "60a53705c932c23122115ebe078ee129"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trello-task",
+								"value": "create-board"
+							},
+							{
+								"key": "origin",
+								"value": "https://trello.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "referer",
+								"value": "https://trello.com/kivancbayram2/boards"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-TR,en;q=0.9,tr-TR;q=0.8,tr;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "cookie",
+								"value": "gdpr-cookie-consent=accepted; ajs_group_id=null; ajs_anonymous_id=%2263ab8c0e-f3b9-4234-98be-1c89b6bf4490%22; _ga=GA1.2.2136139828.1611412560; _biz_uid=7cb2a529c45846cac1debf3f162377ab; _mkto_trk=id:594-ATC-127&token:_mch-trello.com-1611412561068-48818; G_ENABLED_IDPS=google; _biz_flagsA=%7B%22Version%22%3A1%2C%22ViewThrough%22%3A%221%22%2C%22XDomain%22%3A%221%22%2C%22Frm%22%3A%221%22%2C%22Mkto%22%3A%221%22%7D; dsc=55bc416d8ae2923d72964455b73fe45b505ee61152ffce7c1e071df2862d3094; lang=en-TR; landing=New%20Landing; _gid=GA1.2.919947811.1621438910; _gcl_au=1.1.759098146.1621438910; _sp_ses.dc4d=*; _biz_sid=22e539; BP_GTM_FPC=41318df8-6e02-47f6-8c2d-13048438f71f; _uetsid=ba4be720b8b811eb9d278b1aaa0d5eb8; _uetvid=ba4c5460b8b811eb8c6859ef747d0153; _biz_nA=8; _biz_pendingA=%5B%5D; token=600c3473d37f5b0e4de7033a%2Fl8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou; hasAccount=atlassian; loggedIn=1; mab=600c3473d37f5b0e4de7033a; __cid=KysS01T-qVPCaO6N7xEiOVni2jqA1SIqgxZ2OpQSGFStQy8k0DD7OoN3fgKtD0gyvho6zoBYeclPhhJtgw-AxjBIewXkZDBV-n4RVuE4SBSwN1Vt6XkZVfdkXXTUN0wKridGGtd-Ewy0LF1CtiNUGsFnDVblQBhYy34JFbUkShSzIV0Sy18pd8w7XVbpfBgax3IeUe8-XXnoZRJX5ThECq4nUw60JE0UsiZPGtN2G1vyflIPsyBTCbZ7dVy3I04KsC9KTYMQ97qgF306gBd9OoAXfTqAF4I; preAuthProps=s%3A600c3473d37f5b0e4de7033a%3AisEnterpriseAdmin%3Dfalse.1rd1cp2b%2F4qm2lEDaior6SsNk9FuAPYYSdXW3NemDRY; _sp_id.dc4d=edde2b53-83af-4bce-b5da-5a14706be2cc.1611412560.21.1621440249.1615024320.7e98a9b9-c5bb-4cb3-8dac-fc280a87552d"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"defaultLists\":false,\"name\":\"NewBoard\",\"prefs_permissionLevel\":\"org\",\"prefs_selfJoin\":true,\"idOrganization\":\"600c34a4dc448a6de877cfda\",\"prefs_background_url\":\"https://images.unsplash.com/photo-1621274403997-37aace184f49?ixid=Mnw3MDY2fDB8MXxjb2xsZWN0aW9ufDF8MzE3MDk5fHx8fHwyfHwxNjIxNDM3NDgy&ixlib=rb-1.2.1&w=2560&h=2048&q=90\",\"token\":\"6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c\"}"
+						},
+						"url": {
+							"raw": "https://trello.com/1/boards",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cURL Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authority",
+								"value": "trello.com"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+							},
+							{
+								"key": "x-trello-reqid",
+								"value": "600c3473d37f5b0e4de7033a-0.5952436062597937"
+							},
+							{
+								"key": "x-trello-client-version",
+								"value": "build-7773"
+							},
+							{
+								"key": "x-trello-traceid",
+								"value": "60a53705c932c23122115ebe078ee129"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trello-task",
+								"value": "create-board"
+							},
+							{
+								"key": "origin",
+								"value": "https://trello.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "referer",
+								"value": "https://trello.com/kivancbayram2/boards"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-TR,en;q=0.9,tr-TR;q=0.8,tr;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "cookie",
+								"value": "gdpr-cookie-consent=accepted; ajs_group_id=null; ajs_anonymous_id=%2263ab8c0e-f3b9-4234-98be-1c89b6bf4490%22; _ga=GA1.2.2136139828.1611412560; _biz_uid=7cb2a529c45846cac1debf3f162377ab; _mkto_trk=id:594-ATC-127&token:_mch-trello.com-1611412561068-48818; G_ENABLED_IDPS=google; _biz_flagsA=%7B%22Version%22%3A1%2C%22ViewThrough%22%3A%221%22%2C%22XDomain%22%3A%221%22%2C%22Frm%22%3A%221%22%2C%22Mkto%22%3A%221%22%7D; dsc=55bc416d8ae2923d72964455b73fe45b505ee61152ffce7c1e071df2862d3094; lang=en-TR; landing=New%20Landing; _gid=GA1.2.919947811.1621438910; _gcl_au=1.1.759098146.1621438910; _sp_ses.dc4d=*; _biz_sid=22e539; BP_GTM_FPC=41318df8-6e02-47f6-8c2d-13048438f71f; _uetsid=ba4be720b8b811eb9d278b1aaa0d5eb8; _uetvid=ba4c5460b8b811eb8c6859ef747d0153; _biz_nA=8; _biz_pendingA=%5B%5D; token=600c3473d37f5b0e4de7033a%2Fl8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou; hasAccount=atlassian; loggedIn=1; mab=600c3473d37f5b0e4de7033a; __cid=KysS01T-qVPCaO6N7xEiOVni2jqA1SIqgxZ2OpQSGFStQy8k0DD7OoN3fgKtD0gyvho6zoBYeclPhhJtgw-AxjBIewXkZDBV-n4RVuE4SBSwN1Vt6XkZVfdkXXTUN0wKridGGtd-Ewy0LF1CtiNUGsFnDVblQBhYy34JFbUkShSzIV0Sy18pd8w7XVbpfBgax3IeUe8-XXnoZRJX5ThECq4nUw60JE0UsiZPGtN2G1vyflIPsyBTCbZ7dVy3I04KsC9KTYMQ97qgF306gBd9OoAXfTqAF4I; preAuthProps=s%3A600c3473d37f5b0e4de7033a%3AisEnterpriseAdmin%3Dfalse.1rd1cp2b%2F4qm2lEDaior6SsNk9FuAPYYSdXW3NemDRY; _sp_id.dc4d=edde2b53-83af-4bce-b5da-5a14706be2cc.1611412560.21.1621440249.1615024320.7e98a9b9-c5bb-4cb3-8dac-fc280a87552d"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://trello.com/1/boards",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cURL card",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "trello.com"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/javascript, */*; q=0.01"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "x-trello-client-version",
+								"value": "build-7777"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "origin",
+								"value": "https://trello.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "referer",
+								"value": "https://trello.com/b/cojf3tfl/yeni"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-TR,en;q=0.9,tr-TR;q=0.8,tr;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "cookie",
+								"value": "gdpr-cookie-consent=accepted; ajs_group_id=null; ajs_anonymous_id=%2263ab8c0e-f3b9-4234-98be-1c89b6bf4490%22; _ga=GA1.2.2136139828.1611412560; _biz_uid=7cb2a529c45846cac1debf3f162377ab; _mkto_trk=id:594-ATC-127&token:_mch-trello.com-1611412561068-48818; G_ENABLED_IDPS=google; _biz_flagsA=%7B%22Version%22%3A1%2C%22ViewThrough%22%3A%221%22%2C%22XDomain%22%3A%221%22%2C%22Frm%22%3A%221%22%2C%22Mkto%22%3A%221%22%7D; dsc=55bc416d8ae2923d72964455b73fe45b505ee61152ffce7c1e071df2862d3094; lang=en-TR; landing=New%20Landing; _gid=GA1.2.919947811.1621438910; _gcl_au=1.1.759098146.1621438910; _sp_ses.dc4d=*; _biz_sid=22e539; BP_GTM_FPC=41318df8-6e02-47f6-8c2d-13048438f71f; _uetsid=ba4be720b8b811eb9d278b1aaa0d5eb8; _uetvid=ba4c5460b8b811eb8c6859ef747d0153; _biz_nA=8; _biz_pendingA=%5B%5D; token=600c3473d37f5b0e4de7033a%2Fl8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou; hasAccount=atlassian; loggedIn=1; mab=600c3473d37f5b0e4de7033a; __cid=KysS01T-qVPCaO6N7xEiOVni2jqA1SIqgxZ2OpQSGFStQy8k0DD7OoN3fgKtD0gyvho6zoBYeclPhhJtgw-AxjBIewXkZDBV-n4RVuE4SBSwN1Vt6XkZVfdkXXTUN0wKridGGtd-Ewy0LF1CtiNUGsFnDVblQBhYy34JFbUkShSzIV0Sy18pd8w7XVbpfBgax3IeUe8-XXnoZRJX5ThECq4nUw60JE0UsiZPGtN2G1vyflIPsyBTCbZ7dVy3I04KsC9KTYMQ97qgF306gBd9OoAXfTqAF4I; preAuthProps=s%3A600c3473d37f5b0e4de7033a%3AisEnterpriseAdmin%3Dfalse.1rd1cp2b%2F4qm2lEDaior6SsNk9FuAPYYSdXW3NemDRY; _sp_id.dc4d=edde2b53-83af-4bce-b5da-5a14706be2cc.1611412560.21.1621440949.1615024320.7e98a9b9-c5bb-4cb3-8dac-fc280a87552d"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"NewCard\",\"pos\":65535,\"closed\":false,\"idBoard\":\"60a7b5f7b2da507e0a252576\",\"token\":\"600c3473d37f5b0e4de7033a/l8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou\"}"
+						},
+						"url": {
+							"raw": "https://trello.com/1/lists",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cURL Title",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "trello.com"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+							},
+							{
+								"key": "x-trello-client-version",
+								"value": "build-7777"
+							},
+							{
+								"key": "x-trello-traceid",
+								"value": "60a54205623afcb99fdcedaf847d1a0c"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/javascript, */*; q=0.01"
+							},
+							{
+								"key": "x-requested-with",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "origin",
+								"value": "https://trello.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "referer",
+								"value": "https://trello.com/b/cojf3tfl/yeni"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-TR,en;q=0.9,tr-TR;q=0.8,tr;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "cookie",
+								"value": "gdpr-cookie-consent=accepted; ajs_group_id=null; ajs_anonymous_id=%2263ab8c0e-f3b9-4234-98be-1c89b6bf4490%22; _ga=GA1.2.2136139828.1611412560; _biz_uid=7cb2a529c45846cac1debf3f162377ab; _mkto_trk=id:594-ATC-127&token:_mch-trello.com-1611412561068-48818; G_ENABLED_IDPS=google; _biz_flagsA=%7B%22Version%22%3A1%2C%22ViewThrough%22%3A%221%22%2C%22XDomain%22%3A%221%22%2C%22Frm%22%3A%221%22%2C%22Mkto%22%3A%221%22%7D; dsc=55bc416d8ae2923d72964455b73fe45b505ee61152ffce7c1e071df2862d3094; lang=en-TR; landing=New%20Landing; _gid=GA1.2.919947811.1621438910; _gcl_au=1.1.759098146.1621438910; BP_GTM_FPC=41318df8-6e02-47f6-8c2d-13048438f71f; _uetsid=ba4be720b8b811eb9d278b1aaa0d5eb8; _uetvid=ba4c5460b8b811eb8c6859ef747d0153; _biz_nA=8; _biz_pendingA=%5B%5D; token=600c3473d37f5b0e4de7033a%2Fl8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou; hasAccount=atlassian; loggedIn=1; mab=600c3473d37f5b0e4de7033a; __cid=KysS01T-qVPCaO6N7xEiOVni2jqA1SIqgxZ2OpQSGFStQy8k0DD7OoN3fgKtD0gyvho6zoBYeclPhhJtgw-AxjBIewXkZDBV-n4RVuE4SBSwN1Vt6XkZVfdkXXTUN0wKridGGtd-Ewy0LF1CtiNUGsFnDVblQBhYy34JFbUkShSzIV0Sy18pd8w7XVbpfBgax3IeUe8-XXnoZRJX5ThECq4nUw60JE0UsiZPGtN2G1vyflIPsyBTCbZ7dVy3I04KsC9KTYMQ97qgF306gBd9OoAXfTqAF4I; preAuthProps=s%3A600c3473d37f5b0e4de7033a%3AisEnterpriseAdmin%3Dfalse.1rd1cp2b%2F4qm2lEDaior6SsNk9FuAPYYSdXW3NemDRY; _sp_ses.dc4d=*; _sp_id.dc4d=edde2b53-83af-4bce-b5da-5a14706be2cc.1611412560.22.1621443068.1621441000.a90fbc77-41f1-44c5-a546-2b0417aad4cd"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"NewTitle5\",\"closed\":false,\"idLabels\":[],\"idMembers\":[],\"dateLastActivity\":1621443077553,\"pos\":65535,\"cardRole\":null,\"idBoard\":\"60a5370340595624499b040d\",\"idList\":\"60a5409f992b8d1a650bf3c5\",\"token\":\"600c3473d37f5b0e4de7033a/l8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou\"}"
+						},
+						"url": {
+							"raw": "https://trello.com/1/cards",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section2",
+			"item": [
+				{
+					"name": "First API Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "example.com",
+							"host": [
+								"example",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TrelloBodyPostRequest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "trello.com"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"90\", \"Google Chrome\";v=\"90\""
+							},
+							{
+								"key": "x-trello-reqid",
+								"value": "600c3473d37f5b0e4de7033a-0.48521333661217314"
+							},
+							{
+								"key": "x-trello-client-version",
+								"value": "build-7803"
+							},
+							{
+								"key": "x-trello-traceid",
+								"value": "60a7b5f6f8b4607ecdfa75884c1d6a7e"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "x-trello-task",
+								"value": "create-board"
+							},
+							{
+								"key": "origin",
+								"value": "https://trello.com"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-origin"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "referer",
+								"value": "https://trello.com/b/61XFuYrn/udemytrello557"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-TR,en;q=0.9,tr-TR;q=0.8,tr;q=0.7,en-US;q=0.6"
+							},
+							{
+								"key": "cookie",
+								"value": "gdpr-cookie-consent=accepted; ajs_group_id=null; ajs_anonymous_id=%2263ab8c0e-f3b9-4234-98be-1c89b6bf4490%22; _ga=GA1.2.2136139828.1611412560; _biz_uid=7cb2a529c45846cac1debf3f162377ab; _mkto_trk=id:594-ATC-127&token:_mch-trello.com-1611412561068-48818; G_ENABLED_IDPS=google; _biz_flagsA=%7B%22Version%22%3A1%2C%22ViewThrough%22%3A%221%22%2C%22XDomain%22%3A%221%22%2C%22Frm%22%3A%221%22%2C%22Mkto%22%3A%221%22%7D; dsc=55bc416d8ae2923d72964455b73fe45b505ee61152ffce7c1e071df2862d3094; lang=en-TR; _gcl_au=1.1.759098146.1621438910; BP_GTM_FPC=41318df8-6e02-47f6-8c2d-13048438f71f; _uetvid=ba4c5460b8b811eb8c6859ef747d0153; _biz_nA=8; _biz_pendingA=%5B%5D; token=600c3473d37f5b0e4de7033a%2Fl8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou; hasAccount=atlassian; loggedIn=1; mab=600c3473d37f5b0e4de7033a; __cid=KysS01T-qVPCaO6N7xEiOVni2jqA1SIqgxZ2OpQSGFStQy8k0DD7OoN3fgKtD0gyvho6zoBYeclPhhJtgw-AxjBIewXkZDBV-n4RVuE4SBSwN1Vt6XkZVfdkXXTUN0wKridGGtd-Ewy0LF1CtiNUGsFnDVblQBhYy34JFbUkShSzIV0Sy18pd8w7XVbpfBgax3IeUe8-XXnoZRJX5ThECq4nUw60JE0UsiZPGtN2G1vyflIPsyBTCbZ7dVy3I04KsC9KTYMQ97qgF306gBd9OoAXfTqAF4I; preAuthProps=s%3A600c3473d37f5b0e4de7033a%3AisEnterpriseAdmin%3Dfalse.1rd1cp2b%2F4qm2lEDaior6SsNk9FuAPYYSdXW3NemDRY; _gid=GA1.2.1851345485.1621545885; _gac_UA-53826304-2=1.1621545952.Cj0KCQjwkZiFBhD9ARIsAGxFX8DDQ9Wk1DZ_ilbcMGxQSFJkx0SfAcr0IEj2HS8mZPsXrq59aJxCM74aAhybEALw_wcB; _gcl_aw=GCL.1621545953.Cj0KCQjwkZiFBhD9ARIsAGxFX8DDQ9Wk1DZ_ilbcMGxQSFJkx0SfAcr0IEj2HS8mZPsXrq59aJxCM74aAhybEALw_wcB; _gcl_dc=GCL.1621545953.Cj0KCQjwkZiFBhD9ARIsAGxFX8DDQ9Wk1DZ_ilbcMGxQSFJkx0SfAcr0IEj2HS8mZPsXrq59aJxCM74aAhybEALw_wcB; _sp_ses.dc4d=*; _sp_id.dc4d=edde2b53-83af-4bce-b5da-5a14706be2cc.1611412560.27.1621603556.1621596402.7b5dc5d2-c0f1-4fb1-a62f-c92a9766b60b"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"defaultLists\":false,\"name\":\"Boardss\",\"prefs_permissionLevel\":\"org\",\"prefs_selfJoin\":true,\"idOrganization\":\"60a7b5f7b2da507e0a252576\",\"prefs_background_url\":\"https://images.unsplash.com/photo-1621472703232-b637ed3f1f49?ixid=Mnw3MDY2fDB8MXxjb2xsZWN0aW9ufDF8MzE3MDk5fHx8fHwyfHwxNjIxNjAwNjMw&ixlib=rb-1.2.1&w=2560&h=2048&q=90\",\"token\":\"600c3473d37f5b0e4de7033a/l8soKCpLb1nm4SOisw0yBkT65kntD8KZHhhfmFragzhxTQQiJ3G9BPuBtcOMEwou\"}"
+						},
+						"url": {
+							"raw": "https://trello.com/1/boards",
+							"protocol": "https",
+							"host": [
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section3",
+			"item": [
+				{
+					"name": "16-Create a Board-Trello",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Board is name is newss and closed variable is false\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.name).to.eql(\"newss\");\r",
+									"    pm.expect(jsonData.closed).to.eql(false);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Board should be private\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.prefs.permissionLevel).to.eql(\"private\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/?key={{trelloKey}}&token={{trelloToken}}&name=newss",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								""
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{trelloKey}}"
+								},
+								{
+									"key": "token",
+									"value": "{{trelloToken}}"
+								},
+								{
+									"key": "name",
+									"value": "newss"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment-AddAListToTheCreatedBoard",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Created list name of newBoard is TODO  and closed variable is false\", function () {\r",
+									"    \r",
+									"    pm.expect(response.name).to.eql(\"TODO\");\r",
+									"    pm.expect(response.closed).to.eql(false);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/lists?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c&idBoard=60a91419420c0215d55f523c&name=TODO",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"lists"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+								},
+								{
+									"key": "token",
+									"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+								},
+								{
+									"key": "idBoard",
+									"value": "60a91419420c0215d55f523c"
+								},
+								{
+									"key": "name",
+									"value": "TODO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment-AddACardToTheCreatedList",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Created card name of TODO list is 'Learn Postman' and closed variable is false\", function () {\r",
+									"    \r",
+									"    pm.expect(response.name).to.eql(\"Learn Postman\");\r",
+									"    pm.expect(response.closed).to.eql(false);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Is idBoard Ok\", function () {\r",
+									"    \r",
+									"    pm.expect(response.idBoard).to.eql(\"60a91419420c0215d55f523c\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/cards?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c&idList=60a919fdcf77a4899b83022d&name=Learn Postman",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"cards"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+								},
+								{
+									"key": "token",
+									"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+								},
+								{
+									"key": "idList",
+									"value": "60a919fdcf77a4899b83022d"
+								},
+								{
+									"key": "name",
+									"value": "Learn Postman"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment-DeleteTheBoard",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api.trello.com/1/boards/:id?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c",
+							"protocol": "https",
+							"host": [
+								"api",
+								"trello",
+								"com"
+							],
+							"path": [
+								"1",
+								"boards",
+								":id"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+								},
+								{
+									"key": "token",
+									"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60a9263f0f61c93c871daa75"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section4",
+			"item": [
+				{
+					"name": "33-ListingRepositoriesAvailableOnTheProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment-CreateRepository",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"repoAdi\",\"Repo\"+parseInt(Math.random()*1000));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"{{repoAdi}}\",\r\n    \"description\":\"Rendomly created Repository\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignmnet-DeleteTheRepository",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/repos/:owner/:repo",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								":owner",
+								":repo"
+							],
+							"variable": [
+								{
+									"key": "owner",
+									"value": "kivancbayram"
+								},
+								{
+									"key": "repo",
+									"value": "{{repoAdi}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignmnet-ListRepositories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"First Repo Name is Correct\",function(){\r",
+									"    pm.expect(response[0].name).is.eql(\"Automation-Tools\");\r",
+									"})\r",
+									"\r",
+									"\r",
+									"console.log(\"---------------Result---------------\");\r",
+									"console.log(response[0].name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignmnet-CreateIssue",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Found a bug\",\r\n  \"body\": \"I'm having a problem with this.\",\r\n  \"labels\": [\r\n    \"bug\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/:owner/:repo/issues",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								":owner",
+								":repo",
+								"issues"
+							],
+							"variable": [
+								{
+									"key": "owner",
+									"value": "kivancbayram"
+								},
+								{
+									"key": "repo",
+									"value": "{{repoAdi}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assignment-GetIssues",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"let response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Issue Name is \"+pm.environment.get(\"repoAdi\")+\" and login name is kivancbayram \",function(){\r",
+									"    pm.expect(response[0].title).is.eql(\"Found a bug\");\r",
+									"})\r",
+									"\r",
+									"\r",
+									"\r",
+									"\r",
+									"console.log(\"---------------Result---------------\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "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",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.github.com/repos/:owner/:repo/issues",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								":owner",
+								":repo",
+								"issues"
+							],
+							"variable": [
+								{
+									"key": "owner",
+									"value": "kivancbayram"
+								},
+								{
+									"key": "repo",
+									"value": "{{repoAdi}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section6",
+			"item": [
+				{
+					"name": "49-Assertions",
+					"item": [
+						{
+							"name": "Assertions",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// pm.expect ile chai library kullanıyoruz\r",
+											"// burda chai library kullanıyoruz daha fazla ornege sitesinden bakabiliriz\r",
+											"\r",
+											"pm.test(\"if 100 equals 100\", function () {  //Passed\r",
+											"    pm.expect(100).to.eql(100);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if 100 equals 101\", function () {  //Failed\r",
+											"    pm.expect(100).to.eql(101, 'must equal 101');  // en sagdaki string hata alınca atacagı error mesajı icin\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if object a equals object b\", function () {  //Passed\r",
+											"                                                      // İki obje birbirine esit mi\r",
+											"    let a ={\r",
+											"        \"name\":\"John\"\r",
+											"    };\r",
+											"    let b ={\r",
+											"        \"name\":\"John\"\r",
+											"    };\r",
+											"    \r",
+											"    pm.expect(a).to.eql(b);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if object a equals object b\", function () {  //Failed\r",
+											"                                                      // İki obje birbirine esit mi\r",
+											"    let a ={\r",
+											"        \"name\":\"John\"\r",
+											"    };\r",
+											"    let b ={\r",
+											"        \"name\":\"John\",\r",
+											"        \"age\": 19\r",
+											"    };\r",
+											"    \r",
+											"    pm.expect(a).to.eql(b,'Not equal');\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"if object a does not equal object b\", function () {  //Failed\r",
+											"                                                      // İki obje birbirine esit mi\r",
+											"    let a ={\r",
+											"        \"name\":\"John\"\r",
+											"    };\r",
+											"    let b ={\r",
+											"        \"name\":\"John\"\r",
+											"    };\r",
+											"    \r",
+											"    pm.expect(a).to.not.eql(b);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if boolean true equals true\", function () {  //Passed\r",
+											"    pm.expect(true).to.be.true;  //  boolean checki\r",
+											"});\r",
+											"\r",
+											"\r",
+											"pm.test(\"if undefined equals undefined\", function () {  //Passed\r",
+											"    pm.expect(undefined).to.be.undefined;  //  undefined checki\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if empty array is empty\", function () {  //Passed\r",
+											"    pm.expect([]).to.be.empty;  //  array empty check\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if array length is 0\", function () {  //Passed\r",
+											"    pm.expect([].length).to.eql(0);  //  array length check\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if array includes 4\", function () {  //Failed\r",
+											"    pm.expect([1,\"a\",2,3]).to.include(4);  //  if array includes 4 \r",
+											"});\r",
+											"\r",
+											"pm.test(\"if 2 is one of array members\", function () {  //Passed\r",
+											"    pm.expect(2).to.be.oneOf([1,2,3]);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"if name starts with\", function () {  //Passed\r",
+											"    pm.expect('Cristiano Ronaldo').to.match(/^Cristiano/);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "www.example.com",
+									"host": [
+										"www",
+										"example",
+										"com"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "50-AssertionsOnArray",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"let jsonData = pm.response.json();\r",
+									"\r",
+									"let manufacturer;\r",
+									"\r",
+									"for(let filter of jsonData.filters){\r",
+									"\r",
+									"    if(filter.name == \"MANUFACTURER\"){\r",
+									"        manufacturer = filter;\r",
+									"    }\r",
+									"\r",
+									"}\r",
+									"\r",
+									"console.log(manufacturer);\r",
+									"\r",
+									"pm.test(\"Manufacturer should not be allowed\", function(){\r",
+									"        pm.expect(manufacturer.name).to.eql(\"MANUFACTURER\");\r",
+									"        pm.expect(manufacturer.isAllowed).to.be.false;\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://wwww.mocky.io/v2/5ab350d62f00005a00ca3663",
+							"protocol": "http",
+							"host": [
+								"wwww",
+								"mocky",
+								"io"
+							],
+							"path": [
+								"v2",
+								"5ab350d62f00005a00ca3663"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section9",
+			"item": [
+				{
+					"name": "Request1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Request3\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "example.com",
+							"host": [
+								"example",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//postman.setNextRequest(null);\r",
+									"\r",
+									"if(pm.globals.get(\"runnedOnce\")){\r",
+									"    postman.setNextRequest(null);\r",
+									"}\r",
+									"\r",
+									"pm.globals.set(\"runnedOnce\",1);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "example.com",
+							"host": [
+								"example",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Request2\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "example.com",
+							"host": [
+								"example",
+								"com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request4",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "example.com",
+							"host": [
+								"example",
+								"com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section10",
+			"item": [
+				{
+					"name": "83Video",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"var companies = pm.environment.get(\"companies\");\r",
+									"\r",
+									"\r",
+									"if(!companies){\r",
+									"    var companies = ['Google',\"Yahoo\",\"Facebook\",\"Amazon\"]; \r",
+									"}\r",
+									"\r",
+									"var currentCompany = companies.shift();\r",
+									"\r",
+									"pm.environment.set(\"company\",currentCompany);\r",
+									"\r",
+									"pm.environment.set(\"companies\",companies);\r",
+									"\r",
+									"//--------------------- ------------------- ---------------------\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var companies = pm.environment.get(\"companies\");\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"if(companies && companies.length > 0){\r",
+									"    postman.setNextRequest(\"https://restful-booker.herokuapp.com/auth\");\r",
+									"}\r",
+									"else{\r",
+									"    postman.setNextRequest(null);\r",
+									"}\r",
+									"\r",
+									"\r",
+									"//----------------------------  -------------------------   ------------------------\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"{{company}}\",\r\n    \"password\" : \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://restful-booker.herokuapp.com/auth",
+							"protocol": "https",
+							"host": [
+								"restful-booker",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"var companies = [\"Google\",\"Yahoo\",\"Facebook\",\"Amazon\"]; \r",
+									"\r",
+									"var temporary;\r",
+									"\r",
+									"temporary = companies[0];\r",
+									"\r",
+									"pm.environment.set(\"company\",temporary)\r",
+									"pm.environment.set(\"companies\",companies);\r",
+									"var currentCompany = companies.shift();\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(companies.length >0){\r",
+									"    postman.setNextRequest(\"New Request\");\r",
+									"}\r",
+									"\r",
+									"else{\r",
+									"    postman.setNextRequest(null);\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{company}}\",\r\n    \"job\": \"leader\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users/2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "84Video",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const resp = pm.response.json();\r",
+									"\r",
+									"//pm.variables.set('customerId',pm.iterationData.get('customerId'));\r",
+									"\r",
+									"pm.test(\"Should contain the reference id\", function () {\r",
+									"    pm.expect(resp.json.referenceId).to.eql(pm.environment.get(\"referenceId\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Should contain the customer id\", function () {\r",
+									"    //pm.expect(response.json.customerId).to.eql(pm.globals.get(\"customerId\"));\r",
+									"    //pm.expect(resp.json.customerId).to.eql(\"9000\");\r",
+									"    pm.expect(resp.json.customerId).to.eql(pm.iterationData.get(\"customerId\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Should contain the product id\", function () {\r",
+									"    pm.expect(resp.json.productId).to.eql(pm.environment.get(\"productId\"));\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Should contain the product id\", function () {\r",
+									"    pm.expect(resp.json.productId).to.eql(pm.iterationData.get(\"productId\"));\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"referenceId\":\"{{referenceId}}\",\r\n    \"customerId\":\"{{customerId}}\",\r\n    \"productId\":\"{{productId}}\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "httpbin.org/post",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

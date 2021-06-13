@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f7df3df2-bf1a-4ced-8489-da85f472dcda",
+		"name": "UdemyValentine2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Section10DogruCalisanSorgu",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var companies = pm.environment.get(\"companies\");\r",
+							"if(companies.length == 0){\r",
+							"    var companies = [\"Google\",\"Yahoo\",\"Facebook\",\"Amazon\"];\r",
+							"}\r",
+							"\r",
+							"var temporary;\r",
+							"\r",
+							"temporary = companies[0];\r",
+							"\r",
+							"pm.environment.set(\"company\",temporary)\r",
+							"pm.environment.set(\"companies\",companies);\r",
+							"\r",
+							"// shift metodu arrayin ilk elemanını siler ve diger elemanlar başa gelir\r",
+							"var currentCompany = companies.shift();\r",
+							"\r",
+							"console.log(companies[0])\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var companies;\r",
+							"\r",
+							"companies = pm.environment.get(\"companies\");\r",
+							"    pm.test(\"Status code is 201\", function () {\r",
+							"        pm.response.to.have.status(201);\r",
+							"    });\r",
+							"if(companies.length >0){\r",
+							"    postman.setNextRequest(\"New Request\");\r",
+							"}\r",
+							"\r",
+							"else{\r",
+							"    postman.setNextRequest(null);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{company}}\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

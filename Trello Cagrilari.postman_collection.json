@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "8691b218-4398-4728-8877-7d1d3ad8a12b",
+		"name": "Trello Cagrilari",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Trello Pano Olusturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//burda bir degisken olusturalım asagıda, json cozumleme yapabilmek icin\r",
+							"// bu asagıdaki cozumlemeyi yapmazsak, console a karısık bir sekilde gelmis olacak response\r",
+							"\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Trello Pano Name Kontrolu\",function(){\r",
+							"    pm.expect(response.name).is.eql(pm.environment.get(\"panoAdi\"))\r",
+							"    pm.expect(response.closed).to.be.false\r",
+							"})\r",
+							"\r",
+							"// name filedini almak istedigimiz icin direkt olarak consoleda onun adını yazdık\r",
+							"console.log(response.name)\r",
+							"// bu sefer de prefs alanının altındaki hideVotes alanını console a yazdıralım\r",
+							"//console.log(response.prefs.hideVotes)\r",
+							"\r",
+							"// dinamik degisken olması icin\r",
+							"pm.environment.set(\"panoId\",response.id);\r",
+							"\r",
+							"postman.setNextRequest(\"Trello List Olusturma\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"panoAdi\",\"UdemyTrello\"+parseInt(Math.random()*1000));\r",
+							"\r",
+							"// burda random bir deger urettik, onu bir string ile birlestirdik"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c&name={{panoAdi}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+						},
+						{
+							"key": "token",
+							"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+						},
+						{
+							"key": "name",
+							"value": "{{panoAdi}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello List Olusturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"let response = pm.response.json();\r",
+							"// name filedini almak istedigimiz icin direkt olarak consoleda onun adını yazdık\r",
+							"\r",
+							"// dinamik degisken olması icin\r",
+							"pm.environment.set(\"listID\",response.id);\r",
+							"\r",
+							"postman.setNextRequest(\"Trello Card Olusturma\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c&name=Postman Trial List&idBoard={{panoId}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+						},
+						{
+							"key": "token",
+							"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+						},
+						{
+							"key": "name",
+							"value": "Postman Trial List"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{panoId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Card Olusturma",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let response = pm.response.json();\r",
+							"// name filedini almak istedigimiz icin direkt olarak consoleda onun adını yazdık\r",
+							"console.log(response.name)\r",
+							"// bu sefer de prefs alanının altındaki hideVotes alanını console a yazdıralım\r",
+							"console.log(response.cover.size)\r",
+							"\r",
+							"// Chai testlerinden kullanalım asagıda\r",
+							"let a = \"udemy\";\r",
+							"let b = \"udemy\";\r",
+							"\r",
+							"pm.test(\"if a equals b\",function(){\r",
+							"    pm.expect(a).is.eql(b);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Trello Card Name Kontrolu\",function(){\r",
+							"    pm.expect(response.name).is.eql(\"GuncellemeCard3\")\r",
+							"    pm.expect(response.closed).to.be.false\r",
+							"})\r",
+							"\r",
+							"// name filedini almak istedigimiz icin direkt olarak consoleda onun adını yazdık\r",
+							"\r",
+							"// dinamik degisken olması icin\r",
+							"pm.environment.set(\"cardId\",response.id);\r",
+							"\r",
+							"\r",
+							"postman.setNextRequest(\"Trello Card Silme\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c&idList={{listID}}&name=GuncellemeCard3",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+						},
+						{
+							"key": "token",
+							"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+						},
+						{
+							"key": "idList",
+							"value": "{{listID}}"
+						},
+						{
+							"key": "name",
+							"value": "GuncellemeCard3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Card Guncelleme",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/cards/:id?key={{trelloKey}}&token={{trelloToken}}&name=New Guncellenen Card",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloToken}}"
+						},
+						{
+							"key": "name",
+							"value": "New Guncellenen Card"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{cardId}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Card Silme",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"postman.setNextRequest(\"Trello List Al\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/cards/:id?key={{trelloKey}}&token={{trelloToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{cardId}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Trello Label Olusturma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/labels?key=c54a67cfb0727d20327bb027f6e0c4e5&token=6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c&name=TrellosLabel&color=pink&idBoard={{panoId}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"labels"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "c54a67cfb0727d20327bb027f6e0c4e5"
+						},
+						{
+							"key": "token",
+							"value": "6a21b8ff8726d33e0b578068f06fc15a95c23ffb309c69d6f9486b61e8afef9c"
+						},
+						{
+							"key": "name",
+							"value": "TrellosLabel"
+						},
+						{
+							"key": "color",
+							"value": "pink"
+						},
+						{
+							"key": "idBoard",
+							"value": "{{panoId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/1/cards/:id?key={{trelloKey}}&token={{trelloToken}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"1",
+						"cards",
+						":id"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "{{trelloKey}}"
+						},
+						{
+							"key": "token",
+							"value": "{{trelloToken}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
